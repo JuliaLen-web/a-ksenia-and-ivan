@@ -587,7 +587,7 @@
     <div class="sm-container">
       <div class="sm-foto__inner">
         <div class="sm-foto__im">
-          <img src="./assets/images/footer.JPG"alt="">
+          <img src="./assets/images/footer.JPG" alt="">
         </div>
       </div>
     </div>
@@ -612,6 +612,28 @@
       </div>
     </div>
   </footer>
+
+  <audio id="track" preload="auto" loop src="./assets/audio/track.mp3">
+  </audio>
+
+
+  <script>
+    let audio = document.querySelector('#track')
+
+    addEventListener("scroll", () => {
+      let playPromise = audio.play()
+
+      if (playPromise !== undefined) {
+        playPromise.then(_ => {
+          console.log('play')
+        }).catch(error => {
+          console.log('error')
+        });
+      }
+
+    })
+  </script>
+
   <script src="./assets/js/timer.js"></script>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />

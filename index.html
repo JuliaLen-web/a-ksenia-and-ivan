@@ -42,23 +42,5 @@
       </div>
     </div>
   </div>
-  <audio id="track" preload="none" loop src="./assets/audio/track.mp3">
-  </audio>
-
-
-  <script>
-    let audio = document.querySelector('#track')
-    let playPromise = audio.play()
-
-    if (playPromise !== undefined) {
-      playPromise.then(_ => {
-        console.log('yyy')
-      })
-      .catch(error => {
-        console.log('eee')
-      });
-    }
-  </script>
-
   <script src="./assets/js/mobile.js" type="text/javascript"></script>
 </body>
