@@ -1,3 +1,7 @@
+
+var d_mdate = "14.09.2024";
+var d_bdate = "14.09.2024";
+
 // lazyload for images
 function img_loader() {
     setTimeout(function(){
@@ -172,9 +176,4 @@ function startAll(){
 
     initializeClock('sm-timer', year + '/' + month + '/' + day);
     setMonthCalendar(year,month,day)
-}
-function thankYou()
-{
-    $('.sm-thanks').toggleClass('active');
-    setTimeout(function(){window.location.reload();},3000)
 }

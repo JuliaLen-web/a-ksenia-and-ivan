@@ -1181,7 +1181,7 @@ section {
 
 @media (max-width:450px) {
     .sm-footer {
-        margin-top: 160px
+        margin-top: 140px
     }
 }
 
@@ -1759,7 +1759,7 @@ section {
 
 @media (max-width:450px) {
     .sm-history__tx h2 {
-        margin-bottom: -80px
+        margin-bottom: -25px
     }
 }
 
@@ -1851,7 +1851,7 @@ section {
     .sm-history__img-mob {
         width: 300px;
         display: block;
-        margin: 0 auto 35px
+        margin: 35px auto 0
     }
 
     .sm-history__img-mob img {
@@ -2878,7 +2878,7 @@ section {
 
 @media (max-width:450px) {
     .sm-contacts__inner h2 span {
-        bottom: 34px;
+        bottom: 60px;
         left: -67px
     }
 }
