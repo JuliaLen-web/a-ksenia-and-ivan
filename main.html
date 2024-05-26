@@ -616,21 +616,34 @@
   <audio id="track" preload="auto" loop src="./assets/audio/track.mp3">
   </audio>
 
+  <div class="icon-msc" id="audioButton">
+    <div class="icon-msc-image">
+      <img id="play" class="icon-msc-image--play" src="./assets/img/svg/play.svg" alt="play-track">
+      <img id="pause" class="icon-msc-image--pause" src="./assets/img/svg/pause.svg" alt="pause-track">
+    </div>
+    <span>включи музыку для атмосферы</span>
+  </div>
 
   <script>
     let audio = document.querySelector('#track')
+    let audioButton = document.querySelector('#audioButton')
+    let played = false
 
-    addEventListener("scroll", () => {
-      let playPromise = audio.play()
+    let playImg = document.querySelector('#play')
+    let pauseImg = document.querySelector('#pause')
 
-      if (playPromise !== undefined) {
-        playPromise.then(_ => {
-          console.log('play')
-        }).catch(error => {
-          console.log('error')
-        });
+    audioButton.addEventListener("click", () => {
+      if (played === false) {
+        audio.play()
+        played = true
+        playImg.style.opacity = 0
+        pauseImg.style.opacity = 1
+      } else {
+        audio.pause()
+        played = false
+        pauseImg.style.opacity = 0
+        playImg.style.opacity = 1
       }
-
     })
   </script>
 
