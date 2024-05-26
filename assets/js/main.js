@@ -31,62 +31,6 @@ function img_loader() {
     }, 150);
 }
 
-function setMonthCalendar(year, month, day) {
-    let monthDays = new Date(year, month, 0).getDate(),
-        monthPrefix = new Date(year, month - 1, 0).getDay(),
-        monthDaysText = '';
-
-    if (monthPrefix > 0) {
-        for (let i = 1; i <= monthPrefix; i++) {
-            monthDaysText += '<div class="sm-calendar__clndr-cell"></div>';
-        }
-    }
-
-    for (let i = 1; i <= monthDays; i++) {
-        monthDaysText += '<div class="sm-calendar__clndr-cell' + ((i == day) ? ' is-active' : '') + '">' + i + '</div>';
-    }
-
-    $('.sm-calendar__clndr-row').html(monthDaysText);
-}
-
-function getTimeRemaining(endtime) {
-
-    var t = Date.parse(endtime) - Date.parse(new Date());
-    var seconds = Math.floor((t / 1000) % 60);
-    var minutes = Math.floor((t / 1000 / 60) % 60);
-    var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-    var days = Math.floor(t / (1000 * 60 * 60 * 24));
-    return {
-        total: t,
-        days: days,
-        hours: hours,
-        minutes: minutes,
-        seconds: seconds
-    };
-}
-
-function initializeClock(id, endtime) {
-    var daysSpan = document.getElementById("sm-days");
-    var hoursSpan = document.getElementById("sm-hours");
-    var minutesSpan = document.getElementById("sm-minutes");
-    var secondsSpan = document.getElementById("sm-seconds");
-
-    function updateClock() {
-        var t = getTimeRemaining(endtime);
-
-        if (t.total <= 0) {
-            clearInterval(timeinterval);
-        }
-
-        daysSpan.innerHTML = t.days;
-        hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
-        minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
-        secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
-    }
-
-    updateClock();
-    var timeinterval = setInterval(updateClock, 1000);
-}
 
 function startAll(){
 
@@ -140,40 +84,8 @@ function startAll(){
         dots: false
     });
 
-    $(".js-sm-wishes-slider").on("init reInit afterChange", function(event, slick) {
-        $(".sm-slider-counterTh").html(
-            slick.slickCurrentSlide() + 1 + "/" + slick.slideCount
-        );
-    });
-
-    $(".js-sm-wishes-slider").slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        appendArrows: $(".sm-slider-arrowsTh"),
-        prevArrow: '<div class="sm-slider__arrow sm-slider__arrow_left"></div>',
-        nextArrow: '<div class="sm-slider__arrow sm-slider__arrow_right"></div>',
-        dots: false
-    });
-
     img_loader();
 
 
-    var year = new Date().getFullYear();
-    var month = 10;
-    var day = 23;
-    var nd = parent.d_mdate;
-    if(nd != '')
-    {
-        nd = parent.d_mdate.split('.');
-        if(nd.length >= 3 && nd[2] >= new Date().getFullYear()) {
-            year = nd[2];
-            month = nd[1];
-            day = nd[0];
-        }
-    }
-
-    initializeClock('sm-timer', year + '/' + month + '/' + day);
     setMonthCalendar(year,month,day)
 }

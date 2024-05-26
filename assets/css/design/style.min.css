@@ -524,250 +524,6 @@ form .agreement label {
     text-align: center
 }
 
-form {
-    --text-color: var(--c-black)
-}
-
-form .inp-wrp,
-form .row {
-    position: relative
-}
-
-form .inp-wrp {
-    display: block;
-    margin-bottom: 30px
-}
-
-form .inp-wrp input:not([type=submit]):not([type=radio]):not([type=checkbox]),
-form .inp-wrp select,
-form .inp-wrp textarea {
-    display: inline-block;
-    width: 100%;
-    height: 45px;
-    padding: 10px 0;
-    background-color: transparent;
-    color: var(--text-color);
-    font-family: "SMHeadersFont", sans-serif;
-    font-size: 18px;
-    line-height: 1.4;
-    font-weight: 400;
-    text-align: left;
-    border: 0;
-    border-bottom: 1px solid var(--text-color);
-    border-radius: 0;
-    box-sizing: border-box;
-    caret-color: var(--c-red);
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    resize: none;
-    outline: 0;
-    transition: all linear .1s
-}
-
-form .inp-wrp input:not([type=submit]):not([type=radio]):not([type=checkbox]).required,
-form .inp-wrp select.required,
-form .inp-wrp textarea.required {
-    border-color: var(--c-red) !important;
-    color: var(--c-red)
-}
-
-form .inp-wrp input:not([type=submit]):not([type=radio]):not([type=checkbox]).required::-webkit-input-placeholder,
-form .inp-wrp select.required::-webkit-input-placeholder,
-form .inp-wrp textarea.required::-webkit-input-placeholder {
-    color: var(--c-red);
-    font-family: "SMHeadersFont", sans-serif;
-    font-weight: 400;
-    font-size: 18px
-}
-
-form .inp-wrp input:not([type=submit]):not([type=radio]):not([type=checkbox]).required:-moz-placeholder,
-form .inp-wrp select.required:-moz-placeholder,
-form .inp-wrp textarea.required:-moz-placeholder {
-    color: var(--c-red);
-    font-family: "SMHeadersFont", sans-serif;
-    font-weight: 400;
-    font-size: 18px
-}
-
-form .inp-wrp input:not([type=submit]):not([type=radio]):not([type=checkbox]).required::-moz-placeholder,
-form .inp-wrp select.required::-moz-placeholder,
-form .inp-wrp textarea.required::-moz-placeholder {
-    color: var(--c-red);
-    font-family: "SMHeadersFont", sans-serif;
-    font-weight: 400;
-    font-size: 18px
-}
-
-form .inp-wrp input:not([type=submit]):not([type=radio]):not([type=checkbox]).required:-ms-input-placeholder,
-form .inp-wrp select.required:-ms-input-placeholder,
-form .inp-wrp textarea.required:-ms-input-placeholder {
-    color: var(--c-red);
-    font-family: "SMHeadersFont", sans-serif;
-    font-weight: 400;
-    font-size: 18px
-}
-
-form .inp-wrp input:not([type=submit]):not([type=radio]):not([type=checkbox]).required~.error,
-form .inp-wrp select.required~.error,
-form .inp-wrp textarea.required~.error {
-    opacity: 1
-}
-
-form .inp-wrp input:not([type=submit]):not([type=radio]):not([type=checkbox]):active::-webkit-input-placeholder,
-form .inp-wrp input:not([type=submit]):not([type=radio]):not([type=checkbox]):focus::-webkit-input-placeholder,
-form .inp-wrp select:active::-webkit-input-placeholder,
-form .inp-wrp select:focus::-webkit-input-placeholder,
-form .inp-wrp textarea:active::-webkit-input-placeholder,
-form .inp-wrp textarea:focus::-webkit-input-placeholder {
-    color: transparent;
-    font-family: "SMHeadersFont", sans-serif;
-    font-weight: 400;
-    font-size: 18px
-}
-
-form .inp-wrp input:not([type=submit]):not([type=radio]):not([type=checkbox]):active:-moz-placeholder,
-form .inp-wrp input:not([type=submit]):not([type=radio]):not([type=checkbox]):focus:-moz-placeholder,
-form .inp-wrp select:active:-moz-placeholder,
-form .inp-wrp select:focus:-moz-placeholder,
-form .inp-wrp textarea:active:-moz-placeholder,
-form .inp-wrp textarea:focus:-moz-placeholder {
-    color: transparent;
-    font-family: "SMHeadersFont", sans-serif;
-    font-weight: 400;
-    font-size: 18px
-}
-
-form .inp-wrp input:not([type=submit]):not([type=radio]):not([type=checkbox]):active::-moz-placeholder,
-form .inp-wrp input:not([type=submit]):not([type=radio]):not([type=checkbox]):focus::-moz-placeholder,
-form .inp-wrp select:active::-moz-placeholder,
-form .inp-wrp select:focus::-moz-placeholder,
-form .inp-wrp textarea:active::-moz-placeholder,
-form .inp-wrp textarea:focus::-moz-placeholder {
-    color: transparent;
-    font-family: "SMHeadersFont", sans-serif;
-    font-weight: 400;
-    font-size: 18px
-}
-
-form .inp-wrp input:not([type=submit]):not([type=radio]):not([type=checkbox]):active:-ms-input-placeholder,
-form .inp-wrp input:not([type=submit]):not([type=radio]):not([type=checkbox]):focus:-ms-input-placeholder,
-form .inp-wrp select:active:-ms-input-placeholder,
-form .inp-wrp select:focus:-ms-input-placeholder,
-form .inp-wrp textarea:active:-ms-input-placeholder,
-form .inp-wrp textarea:focus:-ms-input-placeholder {
-    color: transparent;
-    font-family: "SMHeadersFont", sans-serif;
-    font-weight: 400;
-    font-size: 18px
-}
-
-form .inp-wrp input:not([type=submit]):not([type=radio]):not([type=checkbox]):active~.placeholder,
-form .inp-wrp input:not([type=submit]):not([type=radio]):not([type=checkbox]):focus~.placeholder,
-form .inp-wrp select:active~.placeholder,
-form .inp-wrp select:focus~.placeholder,
-form .inp-wrp textarea:active~.placeholder,
-form .inp-wrp textarea:focus~.placeholder {
-    opacity: 1
-}
-
-form .inp-wrp input::-webkit-input-placeholder,
-form .inp-wrp textarea::-webkit-input-placeholder {
-    color: "var(--c-gray_a)";
-    font-family: "SMHeadersFont", sans-serif;
-    font-weight: 400;
-    font-size: 18px
-}
-
-form .inp-wrp input:-moz-placeholder,
-form .inp-wrp textarea:-moz-placeholder {
-    color: "var(--c-gray_a)";
-    font-family: "SMHeadersFont", sans-serif;
-    font-weight: 400;
-    font-size: 18px
-}
-
-form .inp-wrp input::-moz-placeholder,
-form .inp-wrp textarea::-moz-placeholder {
-    color: "var(--c-gray_a)";
-    font-family: "SMHeadersFont", sans-serif;
-    font-weight: 400;
-    font-size: 18px
-}
-
-form .inp-wrp input:-ms-input-placeholder,
-form .inp-wrp textarea:-ms-input-placeholder {
-    color: "var(--c-gray_a)";
-    font-family: "SMHeadersFont", sans-serif;
-    font-weight: 400;
-    font-size: 18px
-}
-
-form .inp-wrp textarea {
-    font-family: "SMHeadersFont", sans-serif;
-    padding: 18px 20px;
-    height: 120px;
-    border: 1px solid var(--c-black)
-}
-
-form .inp-wrp select {
-    color: var(--c-gray_a)
-}
-
-form .inp-wrp .error,
-form .inp-wrp .placeholder {
-    display: block;
-    position: absolute;
-    opacity: 0;
-    transition: all ease-in-out .2s
-}
-
-form .inp-wrp .placeholder {
-    top: -10px
-}
-
-form .inp-wrp .error {
-    top: 100%;
-    color: var(--c-red) !important;
-    margin-top: 7px
-}
-
-form .agreement {
-    font-size: 13px;
-    line-height: 1.4
-}
-
-form label {
-    display: inline-flex;
-    align-items: center;
-    margin-right: 16px
-}
-
-form input[type=checkbox],
-form input[type=radio] {
-    width: 24px;
-    height: 24px;
-    border: 1px solid var(--text-color);
-    border-radius: 0;
-    margin: 0 16px 0 0;
-    padding: 0;
-    background-color: transparent;
-    outline: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    cursor: pointer
-}
-
-form input[type=checkbox]+span,
-form input[type=radio]+span {
-    cursor: pointer
-}
-
-form input[type=radio] {
-    border-radius: 100%
-}
-
 table {
     width: 100%;
     border-collapse: collapse
@@ -851,6 +607,7 @@ img {
     cursor: pointer;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDkiIGhlaWdodD0iNDYiIHZpZXdCb3g9IjAgMCA0OSA0NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEuMDAxOTUgMUw0Ni4wMDIgMjMuNUwxLjAwMTk1IDQ2IiBzdHJva2U9IiMyRDJEMzUiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K)
 }
 
@@ -861,6 +618,10 @@ img {
         top: 0;
         background-size: contain
     }
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    display: none;
 }
 
 .sm-slider__arrow_left {
@@ -1129,7 +890,7 @@ section {
 @media (max-width:450px) {
     .sm-button {
         padding: 8px;
-        font-size: 18px;
+        font-size: 20px;
         min-height: 54px;
         width: auto;
         min-width: inherit
@@ -1541,7 +1302,7 @@ section {
 @media (max-width:450px) {
     .sm-banner__date {
         margin-top: 40px;
-        font-size: 18px;
+        font-size: 20px;
         letter-spacing: 4.5px
     }
 }
@@ -1764,9 +1525,10 @@ section {
 }
 
 .sm-history__tx h2 span {
+    font-size: 370px;
     color: var(--beige);
     text-transform: lowercase;
-    right: -273px;
+    right: -195px;
     bottom: 0;
     z-index: 2
 }
@@ -1774,7 +1536,8 @@ section {
 @media (max-width:450px) {
     .sm-history__tx h2 span {
         right: 52px;
-        bottom: 30px
+        bottom: 30px;
+        font-size: 150px
     }
 }
 
@@ -1826,7 +1589,7 @@ section {
         height: calc(100% - 40px);
         max-height: 800px;
         transform: rotate(-17deg);
-        background: #000;
+        background: #bbbaba;
         z-index: 0
     }
 }
@@ -2222,6 +1985,22 @@ section {
     }
 }
 
+.sm-code__slider {
+    height: 330px;
+}
+
+@media (max-width:450px) {
+    .sm-code__slider {
+        height: 280px;
+    }
+}
+
+.swiper-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 .sm-code__slider-al img,
 .sm-location__foto-item img,
 .sm-location__foto-main-im img {
@@ -2291,7 +2070,7 @@ section {
     margin-top: 12px;
     padding: 0 50px;
     box-sizing: border-box;
-    font-size: 18px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
@@ -2869,15 +2648,17 @@ section {
 }
 
 .sm-contacts__inner h2 span {
+    font-size: 400px;
     color: var(--beige);
     position: absolute;
-    bottom: 82px;
+    bottom: 135px;
     left: -150px;
     z-index: 2
 }
 
 @media (max-width:450px) {
     .sm-contacts__inner h2 span {
+        font-size: 160px;
         bottom: 60px;
         left: -67px
     }
@@ -3315,7 +3096,7 @@ section {
     overflow: hidden;
     position: relative;
     z-index: 4;
-    margin-top: 600px
+    margin-top: 500px
 }
 
 @media (max-width:450px) {
