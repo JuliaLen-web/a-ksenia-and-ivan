@@ -803,78 +803,7 @@
     </div>
   </footer>
 
-
-  <script src="./assets/js/main.js"></script>
-  
-  <script type="text/javascript" src="./assets/js/js-scroll-animations.min.js"></script>
-  <script>
-
-    var cursect = '';
-    function initAll() {
-      $.each($('.slick-initialized'), function () {
-        $(this).slick("unslick");
-      })
-      startAll();
-      setTimeout(function () {
-
-        if ($('.ct-demonstration', window.parent.document).length > 0) {
-
-          $.each(parent.offsections, function (k, v) {
-            $($('.sm-edit')[v]).toggleClass('sm-hidden', true);
-          })
-
-          $('html').addClass('animating');
-          $('body').toggleClass('sm-editor_preview', false);
-          const jsScroll = jsScrollAnimations();
-          jsScroll.init();
-          setTimeout(function () { $('body').toggleClass('sm-loader', false); }, 500);
-        }
-        else {
-          $('body').toggleClass('sm-loader', false);
-        }
-
-
-        Fancybox.bind('[data-fancybox]', {
-          touch: true,
-          closeBtn: true,
-          Thumbs: false,
-          caption: false,
-          autoScale: true,
-          on: {
-            "reveal": (fancybox) => {
-              // Current slide
-              var slides = fancybox.carousel.slides;
-              $.each(slides, function (k, v) {
-                $(v.el).toggleClass('sm-grayscale', $(v.thumbEl).hasClass('sm-grayscale'))
-
-              })
-            },
-          }
-        }
-        );
-
-      }, 500)
-
-      const sections = document.getElementsByClassName("sm-edit");
-
-      const observer = new IntersectionObserver((entries) => {
-        for (const entry of entries)
-          if (entry.isIntersecting) {
-            var data = { cursect: entry.target.dataset.type }
-            var event = new CustomEvent('scrollPos', { detail: data })
-            window.parent.document.dispatchEvent(event)
-          }
-      },
-        {
-          rootMargin: "-50% 0px"
-        });
-      for (let i = 0; i < sections.length; i++) {
-        observer.observe(sections[i]);
-      }
-    }
-
-  </script>
-
+  <script src="./assets/js/timer.js"></script>
 
 </body>
 
