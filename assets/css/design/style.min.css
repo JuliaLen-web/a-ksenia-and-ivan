@@ -3559,6 +3559,10 @@ span.nstyle {
     }
 }
 
-html, body {
+body {
     overflow-x: hidden;
+}
+
+body>section {
+    overflow: hidden;
 }
