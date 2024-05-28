@@ -3562,3 +3562,7 @@ span.nstyle {
 .sm-scroll_type-1 {
     overflow-x: hidden;
 }
+
+.ct-template_wrapper {
+    overflow: hidden;
+}
