@@ -580,6 +580,7 @@ img {
 }
 
 .sm-slider-counter {
+    opacity: 0;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
@@ -618,6 +619,10 @@ img {
         top: 0;
         background-size: contain
     }
+}
+
+.sm-slider-arrows {
+    height: 32px;
 }
 
 .swiper-button-next:after,
@@ -2087,7 +2092,9 @@ section {
     }
 
     .sm-time {
-        margin-top: 160px
+        margin-top: 60px;
+        box-sizing: border-box;
+        padding-top: 100px;
     }
 }
 
