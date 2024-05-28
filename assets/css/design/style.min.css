@@ -3559,9 +3559,9 @@ span.nstyle {
     }
 }
 
-.sm-scroll_type-1 {
-    overflow-x: hidden;
-}
+.sm-scroll_type-1,
+body>div,
+body>section {overflow-x:hidden;}
 
 .ct-template_wrapper {
     overflow: hidden;
