@@ -3566,3 +3566,7 @@ body {
 body>section {
     overflow: hidden;
 }
+
+.sm-foto {
+    overflow-y: visible;
+}
