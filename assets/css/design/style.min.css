@@ -3558,3 +3558,7 @@ span.nstyle {
         margin-right: 5px;
     }
 }
+
+.sm-scroll_type-1 {
+    overflow-x: hidden;
+}
